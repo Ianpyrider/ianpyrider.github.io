@@ -8,24 +8,8 @@ import {
   Heading,
   Highlight,
   useDisclosure,
-  HStack,
   Text,
-  VStack,
-  Icon,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  PopoverHeader,
-  PopoverBody,
-  PopoverFooter,
-  PopoverArrow,
-  PopoverCloseButton,
-  PopoverAnchor,
-  Spacer,
   Center,
-  Button,
-  Image,
-  Link
 } from '@chakra-ui/react';
 import Navbar from "./components/navbar";
 import ProjectBox from "./components/projectbox";
@@ -38,6 +22,7 @@ import PopUpIcon from './components/popupicon';
 import '@fontsource/permanent-marker';
 import '@fontsource/chewy';
 import '@fontsource/gochi-hand';
+
 import { hover } from '@testing-library/user-event/dist/cjs/convenience/hover.js';
 
 const theme = extendTheme({
@@ -372,7 +357,7 @@ function App() {
     <ChakraProvider theme={theme}>
       <Navbar cs="alt.pink.300" bg="#FFFFFF" iconColor='alt.pink.100' tc='alt.pink.50' ts={navbut} f={theme.fonts.body}/>
 
-      <Heading as="h1" textAlign="center" sx={h1Style} pt="0px" pb="0px" id='about'>About me</Heading>
+      <Heading as="h1" textAlign="center" sx={h1Style} pt="0px" pb="0px" id='about'>What me</Heading>
       
       <Heading sx={h4Style}>
           <Highlight query="Brown University" styles={brown_highlight}>
