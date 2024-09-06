@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.7fb5eb54.css",
-    "main.js": "/static/js/main.79df6fd1.js",
+    "main.js": "/static/js/main.0318ab9e.js",
     "static/media/permanent-marker-latin-400-normal.woff": "/static/media/permanent-marker-latin-400-normal.620e313233adb6e7af76.woff",
     "static/media/permanent-marker-latin-400-normal.woff2": "/static/media/permanent-marker-latin-400-normal.bd982c23c848c3486469.woff2",
     "static/media/gochi-hand-latin-400-normal.woff": "/static/media/gochi-hand-latin-400-normal.17cfb49dfc96aa4ff924.woff",
@@ -10,10 +10,10 @@
     "static/media/gochi-hand-latin-400-normal.woff2": "/static/media/gochi-hand-latin-400-normal.f8a78ae51a5e0345e1fe.woff2",
     "index.html": "/index.html",
     "main.7fb5eb54.css.map": "/static/css/main.7fb5eb54.css.map",
-    "main.79df6fd1.js.map": "/static/js/main.79df6fd1.js.map"
+    "main.0318ab9e.js.map": "/static/js/main.0318ab9e.js.map"
   },
   "entrypoints": [
     "static/css/main.7fb5eb54.css",
-    "static/js/main.79df6fd1.js"
+    "static/js/main.0318ab9e.js"
   ]
 }
