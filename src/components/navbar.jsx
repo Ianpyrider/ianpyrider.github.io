@@ -1,9 +1,5 @@
 import { Flex, Box, Spacer, Heading, Button, HStack, Text, Image, keyframes, Icon,
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbSeparator,
-  VStack,
+  VStack, Link
 } from '@chakra-ui/react'
 import React from 'react'
 import { FaCat } from "react-icons/fa";
@@ -22,7 +18,7 @@ export default function navbar(props) {
     <Flex bg={props.bg} as="nav" alignItems="center" py="20px" px='15%'>
       <HStack spacing="5px">
         <Icon as={FaCat} boxSize="9" color={props.iconColor}/>
-        <Heading pl="10px" colorScheme={props.cs} fontSize="45px" fontWeight="300">Ian Rider</Heading>
+        <Heading pl="10px" colorScheme={props.cs} fontSize="45" fontWeight="300">Ian Rider</Heading>
       </HStack>
 
         {/* <VStack>
@@ -36,17 +32,17 @@ export default function navbar(props) {
         <Spacer />
         <HStack spacing="20px" fontSize="20">
         <Text sx={props.ts} _hover={{textDecoration: "underline", textDecorationColor:props.iconColor}}>
-          <a href="#about">
+          <Link href="../ResumeIanRider.pdf" target="_blank" rel="noreferrer">
             <Icon as={IoMdDocument} position="relative" top="3px" right="3px"></Icon>
             Resume
-          </a>
+          </Link>
         </Text>
         <Text sx={props.ts} _hover={{textDecoration: "underline", textDecorationColor:props.iconColor}}>
           <Icon as={FaLinkedin} position="relative" top="3px" right="3px"></Icon>
-          <a href="#projects">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/ian-rider-835186188" target="_blank" rel="noreferrer">LinkedIn</a>
         </Text>
         <Text sx={props.ts} _hover={{textDecoration: "underline", textDecorationColor:props.iconColor}}>
-          <a href="#puzzle">
+          <a href="https://github.com/Ianpyrider" target="_blank" rel="noreferrer">
           <Icon as={FaGithub} position="relative" top="3px" right="3px"></Icon>
           Github</a>
         </Text>

@@ -19,7 +19,8 @@ import {
     Link
   } from '@chakra-ui/react'
 
-export default function PopUpIcon(props) {
+
+export default function PopUpIcon2(props) {
     return (
   
         <Popover placement={props.place}>
@@ -43,19 +44,25 @@ export default function PopUpIcon(props) {
                     {props.title}
                 </Text>
                 </VStack>
-            <PopoverContent bg='#E6E6E6' textColor="black" borderColor="black">
+            <PopoverContent bg='#E6E6E6' borderColor="black">
                 <PopoverArrow bg='#E6E6E6' />
                 <PopoverCloseButton />
                 <PopoverBody>
-                <Text textDecoration="underline" textDecorationColor="alt.pink.200"><a href={props.link} target='_blank' rel="noopener noreferrer">{props.intitle} </a></Text>
+                    <Text>{props.intitle}</Text>
                     <Center>
-                    <HStack spacing="5px" pb="3px">
+                    <HStack spacing="5px">
                         <Text fontSize="14">{props.diff}</Text> 
-                        <Box style={{height: "7px", width: "7px", borderRadius: "50%", border: "solid 1px black"}} background={props.diffCol}/>
                     </HStack>
                     </Center>
                     <Text fontSize="18">
-                        {props.desc}
+                        Feel free to check out my other puzzles about <Link 
+                        href="https://2023.brownpuzzlehunt.com/puzzle/modern-tetris" target='_blank' rel="noopener noreferrer" textColor="blue">Tetris</Link>, <Link 
+                        href="https://2023.brownpuzzlehunt.com/puzzle/remixers" target='_blank' rel="noopener noreferrer" textColor="blue">Mixed Drinks</Link>, <Link 
+                        href="https://www.peaph-archive.com/puzzles-by-year/2020/Summer%20Rabble%20Hunt/Meta%202/2.1-p.pdf" target='_blank' rel="noopener noreferrer" textColor="blue">Dungeons and Dragons</Link>, and <Link 
+                        href="https://www.peaph-archive.com/puzzles-by-year/2020/Summer%20Rabble%20Hunt/Meta%203/3.2-p.pdf" target='_blank' rel="noopener noreferrer" textColor="blue">The Important Videos Playlist</Link>! 
+                        I'm also particularly passionate about creating live events for my puzzlehunts: Most recently, for our 
+                        murder mystery themed hunt, I created an event that had teams become interrogators tasked with getting information
+                        from a man who was seemingly an amnesiac claiming to be the murder victim!   
                     </Text>
                 </PopoverBody>
             </PopoverContent>

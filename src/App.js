@@ -22,6 +22,7 @@ import PopUpIcon from './components/popupicon';
 import '@fontsource/permanent-marker';
 import '@fontsource/chewy';
 import '@fontsource/gochi-hand';
+import PopUpIcon2 from './components/popupicon2';
 
 import { hover } from '@testing-library/user-event/dist/cjs/convenience/hover.js';
 
@@ -334,6 +335,10 @@ function App() {
   const clues_shift = {left: "3%"};
   const bpc_shift = {right: "3%"};
 
+  const oren_desc = "Inspired by the classic puzzle Find Satoshi, puzzlers were challenged to use whatever wits and resources they had to chase down Oren, an average Brown Student going about his day!";
+  const poke_desc = "Each turn of this Pokemon battle warps the usual rules in some way, and it's your job to figure out how. Show what it really takes to be a Pokemon master: Navigate the mess of ability and move interactions to assert your rules-lawyer dominance!";
+  const clues_desc = "Steve, Joe, and Josh have each run into a Blue's clues themed conundrum! Will you be able to gather blue's clues and crack the case?";
+
   const brown_highlight = {fontWeight: '600', textColor: '#964B00', rounded: 'full', px: '1', py: '0', bg: '#F0E5D2'};
   const red_highlight = {fontWeight: '600', textColor: 'alt.pink.700', rounded: 'full', px: '1', py: '0', bg: 'alt.pink.100'};
   const pink_highlight = {fontWeight: '600', textColor: 'alt2.pink.500', rounded: 'full', px: '1', py: '0', bg: 'alt2.pink.100'};
@@ -434,28 +439,6 @@ function App() {
       <Text textAlign="center" sx={{h4Style}} fontWeight="300" pb="15px" fontSize="16">
         (Click the icons to read about my puzzles!)</Text>
 
-      {/* <HStack sx={section_styling} py="10px">
-        <Text width="48%" sx={pStyle}>
-          Paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-        </Text>
-        <Spacer />
-          <SimpleGrid spacing={5} columns={2} width="48%" minChildWidth="200px">
-            <PopUpIcon img="try1.png" title="Showdown!" other={poke_params}/>
-            <PopUpIcon img="frame3.png" title="Find Oren"/>
-            <PopUpIcon img="clues1.png" title="Blues Clues"/>
-            <PopUpIcon img="bpc.png" title="...and many more!"/>
-          </SimpleGrid>
-      </HStack> */}
-
       <Center>
       <Box sx={section_styling}>
           <Text width="90%" sx={p2Style} px="7%" mb="35px">
@@ -464,10 +447,13 @@ function App() {
             goal of creating a puzzlehunt for Brown's campus. Puzzlehunts are team events in which participants so
             </Highlight>
             <PopUpIcon img="try1.png" title="Showdown!" other={poke_params} 
-            float="right" shift={poke_shift} place="left" font={theme.fonts.alt}/>
+            float="right" shift={poke_shift} place="left" font={theme.fonts.alt}
+            intitle="Showdown!" desc={poke_desc} diff="Difficulty: Hard" diffCol="alt.pink.400"
+            link="https://www.brownpuzzlehunt.com/minorcase/showdown"/>
             lve logic puzzles like the ones you might find in an escape room, where subject matter and puzzle mechanics are only limited by the creativity of the puzzle writer! I'
-            <PopUpIcon img="frame3.png" title="Find Oren" shift={oren_shift} float="left" place="right"
-            font={theme.fonts.alt}/>
+            <PopUpIcon img="frame3.png" title="Find Oren" shift={oren_shift} 
+            intitle="Find Oren" desc={oren_desc} float="left" place="right" diff="Difficulty: Medium" diffCol="alt.yellow.400"
+            font={theme.fonts.alt} link="https://2023.brownpuzzlehunt.com/puzzle/find-oren"/>
             <Highlight query="Brown Puzzlehunt" styles={brown_highlight}>
             m proud to say we fully realized our goal, hosting Brown Puzzlehunt
             </Highlight>
@@ -486,11 +472,15 @@ function App() {
             <Highlight query={["creativity"]} styles={yellow_highlight}>
             s creativity is why I love puzzles: In solving a puzzle, you find yourself doing everythin
             </Highlight>
-            <PopUpIcon img="clues1.png" title="Blue's Clues" float="right"  shift={clues_shift} place="left"
-            font={theme.fonts.alt}/>
+            <PopUpIcon img="clues1.png" title="Blue's Clues" float="right" 
+            intitle="Themed Round: Blue's Clues" desc={clues_desc} diff="Difficulty: Easy" diffCol="alt2.green.500"
+            shift={clues_shift} place="left"
+            font={theme.fonts.alt} link="https://www.brownpuzzlehunt.com/minorcase/blues-clues"/>
             g from searching obscure corners of the Blue's Clues wiki to solving complex Pokemon rule interactions 
             to hunting down a single man in a sea of Brown students. The hunt and club are easily
-            <PopUpIcon img="bph.png" title="...and many more!" float="left" shift={bpc_shift} place="right"
+            <PopUpIcon2 img="bph.png" title="...and many more!" 
+            intitle="Other Puzzles!"
+            float="left" shift={bpc_shift} place="right"
             font={theme.fonts.alt}/>
             <Highlight query={"proudest accomplishments"} styles={lightblue_highlight}>
             some of my proudest accomplishments, embodying these ideals and carryin
@@ -502,7 +492,8 @@ function App() {
             </Highlight>
             e. <p>I truly believe that our team of writers, wonderfully diverse in interests and background, represent the future of puzzlehunts. 
             If you want to learn more, please read about our events, marvel at the art, and take a crack at some of the puzzles at </p>
-              <a href='http://www.brownpuzzlehunt.com'>
+              <a href='http://www.brownpuzzlehunt.com'
+              target='_blank' rel="noopener noreferrer">
               <Highlight query={"www.brownpuzzlehunt.com"} styles={pink_highlight}>
               www.brownpuzzlehunt.com
               </Highlight>
